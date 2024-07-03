@@ -72,6 +72,8 @@ return {
         lsp_zero.default_keymaps({buffer = bufnr})
       end)
 
+      require('mason').setup({})
+      -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
       require('mason-lspconfig').setup({
           ensure_installed = {
               'csharp_ls',
