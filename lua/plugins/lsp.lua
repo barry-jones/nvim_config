@@ -6,8 +6,8 @@ return {
     config = false,
     init = function()
       -- Disable automatic setup, we are doing it manually
-      vim.g.lsp_zero_extend_cmp = 0
-      vim.g.lsp_zero_extend_lspconfig = 0
+      -- vim.g.lsp_zero_extend_cmp = 0
+      -- vim.g.lsp_zero_extend_lspconfig = 0
     end,
   },
   {
@@ -73,7 +73,18 @@ return {
       end)
 
       require('mason-lspconfig').setup({
-          ensure_installed = { 'csharp_ls', 'css_variables', 'cssls', 'groovyls', 'html', 'htmlx', 'jsonls', 'lua_ls', 'pyright', 'tsserver' },
+          ensure_installed = {
+              'csharp_ls',
+              'css_variables',
+              'cssls',
+              'groovyls',
+              'html',
+              'jsonls',
+              'lua_ls',
+              'pyright',
+              'powershell_es',
+              'tsserver'
+          },
         handlers = {
           -- this first function is the "default handler"
           -- it applies to every language server without a "custom handler"
